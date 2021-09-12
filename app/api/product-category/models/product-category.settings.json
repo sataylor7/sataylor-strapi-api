@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "product-categories",
+  "info": {
+    "name": "Product-Category"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "richtext",
+      "required": true
+    },
+    "products": {
+      "via": "product-category",
+      "collection": "product"
+    }
+  }
+}
